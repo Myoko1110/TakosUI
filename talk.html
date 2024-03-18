@@ -190,14 +190,10 @@
 </div>
 </body>
 <script>
-	const chat = document.querySelector(".p-talk-chat-main");
-	chat.scrollIntoView(false);
-
 	document.querySelectorAll('.p-talk-chat-send__form').forEach(function (el) {
 		const dummy = el.querySelector(".p-talk-chat-send__dummy");
 		el.querySelector(".p-talk-chat-send__textarea").addEventListener('input', e => {
 			dummy.textContent = e.target.value + '\u200b';
-			chat.scrollIntoView(false);
 		});
 	});
 
