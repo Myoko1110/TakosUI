@@ -47,7 +47,7 @@ a {
     background-color: #949494;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     *::-webkit-scrollbar {
         width: 5px;
     }
@@ -129,7 +129,7 @@ html, body {
     left: 0;
 }
 
-@media(min-width: 769px) {
+@media (min-width: 769px) {
     .wrapper {
         padding-left: 78px;
     }
@@ -153,7 +153,7 @@ html, body {
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .wrapper {
         padding-bottom: 64px;
     }
@@ -273,10 +273,11 @@ html, body {
     font-size: 12px;
 }
 
-@media(min-width: 769px) {
+@media (min-width: 769px) {
     .p-talk {
         width: 100%;
     }
+
     .p-talk-list {
         width: 360px;
     }
@@ -287,7 +288,7 @@ html, body {
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .p-talk {
         overflow-x: hidden;
         width: fit-content;
@@ -350,7 +351,7 @@ html, body {
     height: 100%;
 }
 
-@media(min-width: 769px) {
+@media (min-width: 769px) {
     .p-talk-chat-prev {
         display: none;
     }
@@ -415,7 +416,7 @@ html, body {
 }
 
 .c-talk-chat.subsequent.other .c-talk-chat-msg {
-    margin-left: 52px;
+    margin-left: 46px;
 }
 
 .c-talk-chat.primary.other .c-talk-chat-msg {
@@ -542,18 +543,21 @@ html, body {
     background-color: transparent;
 }
 
-@media(min-width: 769px) {
+@media (min-width: 769px) {
     .p-talk-chat-main {
         padding: 16px;
     }
+
     .p-talk-chat-title {
         padding: 8px 18px;
     }
 }
-@media(max-width: 768px) {
+
+@media (max-width: 768px) {
     .p-talk-chat-main {
         padding: 8px;
     }
+
     .p-talk-chat-title {
         padding: 8px;
     }
