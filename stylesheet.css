@@ -357,7 +357,6 @@ html, body {
 }
 
 .p-talk-chat-main {
-    padding: 16px;
     overflow-y: auto;
     flex-grow: 1;
 }
@@ -369,7 +368,7 @@ html, body {
 
 .c-talk-chat.self {
     justify-content: right;
-    margin-right: 24px;
+    margin-right: 12px;
 }
 
 .c-talk-chat-box {
@@ -378,7 +377,7 @@ html, body {
 }
 
 .c-talk-chat-icon {
-    height: 42px;
+    height: 36px;
     aspect-ratio: 1 / 1;
 }
 
@@ -397,7 +396,7 @@ html, body {
     padding: 6px 16px;
     border-radius: 12px;
     z-index: 2;
-    font-size: 14px;
+    font-size: 15px;
     width: fit-content;
 }
 
@@ -544,11 +543,17 @@ html, body {
 }
 
 @media(min-width: 769px) {
+    .p-talk-chat-main {
+        padding: 16px;
+    }
     .p-talk-chat-title {
         padding: 8px 18px;
     }
 }
 @media(max-width: 768px) {
+    .p-talk-chat-main {
+        padding: 8px;
+    }
     .p-talk-chat-title {
         padding: 8px;
     }
