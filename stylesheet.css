@@ -244,6 +244,7 @@ html, body {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 
 .c-talk-rooms a {
@@ -387,6 +388,7 @@ html, body {
     align-items: center;
     border: none;
     background-color: #ffffff;
+    outline: none;
 }
 
 .p-talk-chat-prev:hover {
