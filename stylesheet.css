@@ -386,6 +386,7 @@ html, body {
     display: flex;
     align-items: center;
     border: none;
+    background-color: #ffffff;
 }
 
 .p-talk-chat-prev:hover {
