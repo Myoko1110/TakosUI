@@ -78,6 +78,11 @@ html, body {
     display: block;
     position: fixed;
     z-index: 2;
+    transition: transform .3s cubic-bezier(0.07, 1.05, 0.59, 0.99);
+}
+
+.l-header.is-inview {
+    transform: translateY(100%)
 }
 
 .l-header-logo {
@@ -155,7 +160,7 @@ html, body {
 
 @media (max-width: 768px) {
     .wrapper {
-        padding-bottom: 64px;
+        padding: 0;
     }
 
     .l-header {
@@ -189,7 +194,7 @@ html, body {
 }
 
 .p-talk-list {
-    padding: 12px;
+    padding: 12px 12px 76px;
 }
 
 .p-talk-list-title {
@@ -230,12 +235,24 @@ html, body {
     background-color: #e8e8ef;
 }
 
+.c-talk-rooms button {
+    height: 100%;
+    width: 100%;
+    padding: 10px 8px;
+    display: flex;
+    color: #000000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .c-talk-rooms a {
     height: 100%;
     width: 100%;
     padding: 10px 8px;
     display: flex;
     color: #000000;
+    cursor: pointer;
 }
 
 .c-talk-rooms-icon {
@@ -266,6 +283,7 @@ html, body {
 .c-talk-rooms-name {
     font-weight: 700;
     font-size: 14px;
+    width: fit-content;
 }
 
 .c-talk-rooms-msg {
@@ -273,18 +291,46 @@ html, body {
     font-size: 12px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1053px) {
     .p-talk {
         width: 100%;
     }
 
     .p-talk-list {
         width: 360px;
+        flex-grow: 0;
+        flex-shrink: 0;
     }
 
     .p-talk-chat {
         flex-grow: 1;
         padding: 12px 12px 12px 0;
+        width: 100%;
+    }
+
+    .p-talk-chat-container {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 1052px) and (min-width: 769px) {
+    .p-talk {
+        width: 100%;
+    }
+
+    .p-talk-list {
+        width: 360px;
+        flex-shrink: 1;
+    }
+
+    .p-talk-chat {
+        flex-shrink: 2;
+        padding: 12px 12px 12px 0;
+        width: 100%;
+    }
+
+    .p-talk-chat-container {
+        border-radius: 8px;
     }
 }
 
@@ -315,7 +361,6 @@ html, body {
 }
 
 .p-talk-chat-container {
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
     background-color: #f0f0f5;
@@ -340,6 +385,7 @@ html, body {
     cursor: pointer;
     display: flex;
     align-items: center;
+    border: none;
 }
 
 .p-talk-chat-prev:hover {
@@ -498,7 +544,10 @@ html, body {
 
 .p-talk-chat-send__file {
     height: 44px;
+    width: 44px;
     padding: 6px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .p-talk-chat-send__file img {
@@ -514,13 +563,18 @@ html, body {
 }
 
 .p-talk-chat-send__dummy {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 10px 0 10px 16px;
+    margin: 0;
     overflow: hidden;
-    visibility: hidden;
-    padding: 8px 16px;
-    min-height: 42px;
-    white-space: pre-wrap;
+    background-color: transparent;
+    white-space: break-spaces;
     overflow-wrap: break-word;
-    border: 1px solid;
+    visibility: hidden;
 }
 
 .p-talk-chat-send__msg label {
@@ -537,11 +591,13 @@ html, body {
     outline: none;
     border: none;
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 10px 0 10px 16px;
     margin: 0;
     overflow: hidden;
     resize: none;
-    background-color: transparent;
+    background-color: #ffffff;
+    white-space: break-spaces;
+    overflow-wrap: break-word;
 }
 
 @media (min-width: 769px) {

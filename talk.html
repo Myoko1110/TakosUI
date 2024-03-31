@@ -1,3 +1,10 @@
+<!--
+	変更点
+	・headerにも.is-inviewをつけました(トーク画面でヘッダーが消えるように)
+	・たこたこボタンで動作できるようにユーザーリストのリンクと戻るボタン(.p-talk-chat-prev)をbuttonにしときました
+	・cssを結構かえました
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,20 +55,36 @@
 			<div class="p-talk-list-rooms">
 				<ul class="p-talk-list-rooms__ul">
 					<li class="c-talk-rooms">
-						<a href="">
-							<div class="c-talk-rooms-icon">
+						<button>
+							<span class="c-talk-rooms-icon">
 								<img src="static/logo.png" alt="">
-							</div>
-							<div class="c-talk-rooms-box">
-								<div class="c-talk-rooms-name">
-									<p>たこ1</p>
-								</div>
-								<div class="c-talk-rooms-msg">
-									<p>汚くても動いたらいいもの</p>
-								</div>
-							</div>
-						</a>
+							</span>
+							<span class="c-talk-rooms-box">
+								<span class="c-talk-rooms-name">
+									<span>たこ1</span>
+								</span>
+								<span class="c-talk-rooms-msg">
+									<span>汚くても動いたらいいもの</span>
+								</span>
+							</span>
+						</button>
 					</li>
+					<li class="c-talk-rooms is-active">
+						<button>
+							<span class="c-talk-rooms-icon">
+								<img src="static/logo.png" alt="">
+							</span>
+							<span class="c-talk-rooms-box">
+								<span class="c-talk-rooms-name">
+									<span>たこ2</span>
+								</span>
+								<span class="c-talk-rooms-msg">
+									<span>オブジェクトだぁ！</span>
+								</span>
+							</span>
+						</button>
+					</li>
+					<!-- ↓もとのやつ
 					<li class="c-talk-rooms is-active">
 						<a href="">
 							<div class="c-talk-rooms-icon">
@@ -77,15 +100,16 @@
 							</div>
 						</a>
 					</li>
+					-->
 				</ul>
 			</div>
 		</div>
 		<div class="p-talk-chat">
 			<div class="p-talk-chat-container">
 				<div class="p-talk-chat-title">
-					<div class="p-talk-chat-prev">
+					<button class="p-talk-chat-prev">
 						<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="chevronLeftIconTitle">Chevron Left</title> <polyline points="14 18 8 12 14 6 14 6"/> </svg>
-					</div>
+					</button>
 					<p>たこ2</p>
 				</div>
 				<div class="p-talk-chat-main">
@@ -197,11 +221,12 @@
 		});
 	});
 
-	document.querySelectorAll(".c-talk-rooms a").forEach(function (el) {
+	document.querySelectorAll(".c-talk-rooms button").forEach(function (el) {
 		el.addEventListener("click", e => {
 			e.preventDefault();
 			if (window.innerWidth < 769) {
 				document.querySelector(".p-talk").classList.add("is-inview");
+				document.querySelector(".l-header").classList.add("is-inview");
 			}
 		});
 	});
@@ -210,6 +235,7 @@
 		el.addEventListener("click", e => {
 			e.preventDefault()
 			document.querySelector(".p-talk").classList.remove("is-inview");
+			document.querySelector(".l-header").classList.remove("is-inview");
 		});
 	});
 
