@@ -598,7 +598,7 @@ html, body {
     margin: 0;
     overflow: hidden;
     resize: none;
-    background-color: #ffffff;
+    background-color: transparent;
     white-space: break-spaces;
     overflow-wrap: break-word;
 }
