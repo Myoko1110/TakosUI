@@ -1,1 +1,1 @@
-https://myokojp.github.io/TakosUI/talk.html
+https://myoko1110.github.io/TakosUI/talk.html
