@@ -712,5 +712,44 @@ html, body {
         background-color: #2D3748;
         color: #E2E8F0;
     }
+    .c-talk-chat.self .c-talk-chat-msg {
+        background-color: #E53E3E;
+        color: #E2E8F0;
+    }
+    .c-talk-chat-date {
+        color: #E2E8F0;
+    }
+    .c-talk-chat.other .c-talk-chat-date {
+        color: #E2E8F0;
+    }
+    .c-talk-chat.self .c-talk-chat-date {
+        color: #E2E8F0;
+    }
+    .c-talk-date {
+        color: #E2E8F0;
+    }
+    .c-talk-chat-date-box {
+        background-color: #4A5568;
+        color: #E2E8F0;
+    }
+    .p-talk-chat-send__form {
+        background-color: #2D3748;
+    }
+    .p-talk-chat-send__file img {
+        background-color: #2D3748;
+    }
+    .p-talk-chat-send__file img:hover {
+        background-color: #4A5568;
+    }
+    .p-talk-chat-send__textarea {
+        background-color: #2D3748;
+        color: #E2E8F0;
+    }
+    .p-talk-chat-send__dummy {
+        color: #E2E8F0;
+    }
+    .p-talk-chat-send__msg label {
+        color: #E2E8F0;
+    }
 
 }
